@@ -13,7 +13,6 @@ body {
     width: 10%;
     flex-direction: column;
     align-items: flex-end;
-    padding-right: 15px;
     padding-top: 10px;
     border: 5px solid blue;/*temporal*/
 }
@@ -23,6 +22,12 @@ body {
     align-items: center;
     margin-bottom: 40px;
     padding-top: 20px;
+    padding-right: 10px;
+}
+
+.brandName h1 {
+    font-size: 23px;
+    padding-right: 5px;
 }
 
 .brandName img {
@@ -63,15 +68,155 @@ h1 {
 }
 */
 
+
+/*NUESTROS SERVICIOS - INICIO*/
+
 .services {
     display: flex;
     justify-content: center;
     flex-direction: column;
 }
 
-.service1 {
-    display:block;
+/*SERVICIO 1*/
+
+.services h1 {
+    margin: auto;
+    padding-bottom: 50px;
+
 }
+.service1 {
+    display:flex;
+    height: 400px;
+
+    
+}
+
+.service1Text {
+    width: 80%;
+    padding-left:100px;
+    padding-right:170px;
+    
+}
+
+.service1Text p {
+    text-align: justify;
+}
+
+.service1Image { /*AJUSTAR*/
+    width: 50%;
+    display: flex;
+    justify-content: center;
+
+}
+
+.service1Image img {
+    width:400px;
+}
+
+/*SERVICIO 2*/
+
+.services h1 {
+    margin: auto;
+    padding-bottom: 50px;
+}
+
+.service2 {
+    display: flex;
+    height: 400px;
+    margin-top: 50px;
+}
+
+.service2Text {
+    width: 80%;
+    padding-left: 140px;
+    padding-right: 170px;
+}
+
+.service2Text p {
+    text-align: justify;
+}
+
+.service2Image {
+    /*AJUSTAR*/
+    width: 50%;
+    display: flex;
+    justify-content: center;
+
+}
+
+.service2Image img {
+    width: 400px;
+}
+
+
+/*SERVICIO 3*/
+
+.service3 {
+    display: flex;
+    height: 400px;
+    margin-top: 50px;
+
+}
+
+.service3Text {
+    width: 80%;
+    padding-left: 100px;
+    padding-right: 170px;
+
+}
+
+.service3Text p {
+    text-align: justify;
+}
+
+.service3Image {
+    /*AJUSTAR*/
+    width: 50%;
+    display: flex;
+    justify-content: center;
+
+}
+
+.service3Image img {
+    width: 400px;
+}
+
+/*SERVICIO 4*/
+
+.services h1 {
+    margin: auto;
+    padding-bottom: 50px;
+}
+
+.service4 {
+    display: flex;
+    height: 400px;
+    margin-top: 50px;
+}
+
+.service4Text {
+    width: 80%;
+    padding-left: 140px;
+    padding-right: 170px;
+}
+
+.service4Text p {
+    text-align: justify;
+}
+
+.service4Image {
+    /*AJUSTAR*/
+    width: 50%;
+    display: flex;
+    justify-content: center;
+
+}
+
+.service4Image img {
+    width: 400px;
+}
+
+
 
 img {
     width: 100px;
