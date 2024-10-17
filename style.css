@@ -1,0 +1,79 @@
+body {
+    margin: 0;
+    width: 100vw;
+}
+
+.container {
+    display: flex;
+    width: 100vw;
+}
+
+.navbar{
+    display: flex;
+    width: 10%;
+    flex-direction: column;
+    align-items: flex-end;
+    padding-right: 15px;
+    padding-top: 10px;
+    border: 5px solid blue;/*temporal*/
+}
+
+.brandName {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+    padding-top: 20px;
+}
+
+.brandName img {
+    border: 1px solid red;
+    width: 50px;
+}
+
+.menuButton {
+    border: 1px solid red;/*temporal*/
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.contactUsBtn  {
+     border: 1px solid red;/*temporal*/
+     width: 100%;
+     height: 100%;
+ }
+
+ /*NAVBAR FIN*/
+
+.mainBody {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+}
+
+/*CARRUSEL TOP
+.websiteTop {
+    display: flex;
+    width: 90%;
+}
+
+h1 {
+    display: inline-block;
+    font-size: 25px;
+    padding-right: 5px;
+}
+*/
+
+.services {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.service1 {
+    display:block;
+}
+
+img {
+    width: 100px;
+    height: auto;
+}
