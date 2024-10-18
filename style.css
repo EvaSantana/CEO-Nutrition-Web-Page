@@ -1,34 +1,41 @@
 body {
     margin: 0;
     width: 100vw;
+
 }
 
 .container {
     display: flex;
     width: 100vw;
-    
     justify-content: center;
+    position: relative;
 }
 
-.navbar{
+.navbar {
     display: flex;
     width: 10%;
     flex-direction: column;
     align-items: flex-end;
     padding-top: 10px;
-    border: 5px solid blue;/*temporal*/
+    border: 5px solid blue;
+    /*temporal*/
+    background-color: #E7B7C8;
+
 }
 
 .brandName {
     display: flex;
     align-items: center;
+    flex-direction: column;
     margin-bottom: 40px;
     padding-top: 20px;
     padding-right: 10px;
+    position: sticky;
+
 }
 
 .brandName h1 {
-    font-size: 23px;
+    font-size: 18px;
     padding-right: 5px;
 }
 
@@ -38,22 +45,28 @@ body {
 }
 
 .menuButton {
-    border: 1px solid red;/*temporal*/
+    border: 1px solid red;
+    /*temporal*/
     width: 100%;
     margin-bottom: 10px;
+    background-color: #E7B7C8;
+    position: sticky;
 }
 
-.contactUsBtn  {
-     border: 1px solid red;/*temporal*/
-     width: 100%;
-     height: 100%;
- }
+.contactUsBtn {
+    border: 1px solid red;
+    /*temporal*/
+    width: 100%;
+    height: 100%;
+    background-color: #E7B7C8;
+    position: sticky;
+}
 
 .contactUsBtn img {
     /*subir imagen del sobre*/
 }
 
- /*NAVBAR FIN*/
+/*NAVBAR FIN*/
 
 .mainBody {
     display: flex;
@@ -81,7 +94,7 @@ h1 {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    margin-left:60px;
+    margin-left: 60px;
 }
 
 /*SERVICIO 1*/
@@ -91,33 +104,36 @@ h1 {
     padding-bottom: 90px;
 
 }
+
 .service1 {
-    display:flex;
+    display: flex;
     height: 400px;
 
-    
+
 }
 
 .service1Text {
     width: 80%;
-    padding-left:100px;
-    padding-right:170px;
-    
+    padding-left: 60px;
+    padding-right: 170px;
+
 }
 
 .service1Text p {
     text-align: justify;
 }
 
-.service1Image { /*AJUSTAR*/
+.service1Image {
+    /*AJUSTAR*/
     width: 50%;
     display: flex;
     justify-content: center;
+    padding-left: 20px;
 
 }
 
 .service1Image img {
-    width:400px;
+    width: 300px;
 }
 
 /*SERVICIO 2*/
@@ -136,7 +152,7 @@ h1 {
 .service2Text {
     width: 80%;
     padding-left: 57px;
-    padding-right: 170px;
+    padding-right: 60px;
 }
 
 .service2Text p {
@@ -148,12 +164,12 @@ h1 {
     width: 50%;
     display: flex;
     justify-content: center;
-    margin-right:131px;
+    margin-right: 130px;
 
 }
 
 .service2Image img {
-    width: 400px;
+    width: 300px;
 }
 
 
@@ -168,7 +184,7 @@ h1 {
 
 .service3Text {
     width: 80%;
-    padding-left: 100px;
+    padding-left: 60px;
     padding-right: 170px;
 
 }
@@ -182,12 +198,12 @@ h1 {
     width: 50%;
     display: flex;
     justify-content: center;
-    
+    padding-left: 20px;
 
 }
 
 .service3Image img {
-    width: 400px;
+    width: 300px;
 }
 
 /*SERVICIO 4*/
@@ -206,7 +222,7 @@ h1 {
 .service4Text {
     width: 80%;
     padding-left: 57px;
-    padding-right: 170px;
+    padding-right: 60px;
 }
 
 .service4Text p {
@@ -223,13 +239,13 @@ h1 {
 }
 
 .service4Image img {
-    width: 400px;
+    width: 300px;
 }
 
 /*REVIEWS*/
 
 .reviews {
-    display:flex;
+    display: flex;
     flex-direction: column;
     margin-top: 120px;
 }
@@ -251,14 +267,15 @@ h1 {
 /*REVIEWERS*/
 
 .reviewer {
-    display:flex;
+    display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.reviewer img { /*arreglar formato de fotos*/
-    width:70px;
-    height:70px;
+.reviewer img {
+    /*arreglar formato de fotos*/
+    width: 70px;
+    height: 70px;
     border-radius: 100%;
 }
 
@@ -310,14 +327,15 @@ h1 {
 /*FOOTER*/
 
 footer {
-    display:flex;
+    display: flex;
     margin-top: 120px;
-    margin-left:60px;
+    margin-left: 60px;
     justify-content: space-between;
 }
 
 .brandNameFooter {
     padding-left: 57px;
+
 }
 
 .footerLogo {
@@ -337,6 +355,7 @@ footer {
 }
 
 .contact {
+    line-height: 8px;
 }
 
 
