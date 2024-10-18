@@ -49,6 +49,10 @@ body {
      height: 100%;
  }
 
+.contactUsBtn img {
+    /*subir imagen del sobre*/
+}
+
  /*NAVBAR FIN*/
 
 .mainBody {
@@ -330,6 +334,9 @@ footer {
 .footerLogo img {
     border: 1px solid red;
     width: 50px;
+}
+
+.contact {
 }
 
 
