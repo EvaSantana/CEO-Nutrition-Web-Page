@@ -6,6 +6,8 @@ body {
 .container {
     display: flex;
     width: 100vw;
+    
+    justify-content: center;
 }
 
 .navbar{
@@ -75,13 +77,14 @@ h1 {
     display: flex;
     justify-content: center;
     flex-direction: column;
+    margin-left:60px;
 }
 
 /*SERVICIO 1*/
 
 .services h1 {
     margin: auto;
-    padding-bottom: 50px;
+    padding-bottom: 90px;
 
 }
 .service1 {
@@ -128,7 +131,7 @@ h1 {
 
 .service2Text {
     width: 80%;
-    padding-left: 140px;
+    padding-left: 57px;
     padding-right: 170px;
 }
 
@@ -141,6 +144,7 @@ h1 {
     width: 50%;
     display: flex;
     justify-content: center;
+    margin-right:131px;
 
 }
 
@@ -174,6 +178,7 @@ h1 {
     width: 50%;
     display: flex;
     justify-content: center;
+    
 
 }
 
@@ -196,7 +201,7 @@ h1 {
 
 .service4Text {
     width: 80%;
-    padding-left: 140px;
+    padding-left: 57px;
     padding-right: 170px;
 }
 
@@ -209,12 +214,126 @@ h1 {
     width: 50%;
     display: flex;
     justify-content: center;
+    margin-right: 131px;
 
 }
 
 .service4Image img {
     width: 400px;
 }
+
+/*REVIEWS*/
+
+.reviews {
+    display:flex;
+    flex-direction: column;
+    margin-top: 120px;
+}
+
+.reviews h1 {
+    margin: auto;
+    padding-bottom: 90px;
+}
+
+.reviewsCarrusel {
+    display: flex;
+    flex-direction: row;
+    margin-left: 60px;
+    margin-right: 131px;
+    padding-left: 57px;
+
+}
+
+/*REVIEWERS*/
+
+.reviewer {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.reviewer img { /*arreglar formato de fotos*/
+    width:70px;
+    height:70px;
+    border-radius: 100%;
+}
+
+.reviewer p {
+    text-align: center;
+}
+
+/*TEAM MEMBERS*/
+
+.team {
+    display: flex;
+    flex-direction: column;
+    margin-top: 120px;
+}
+
+.team h1 {
+    margin: auto;
+    padding-bottom: 90px;
+}
+
+.teamMembers {
+    display: flex;
+    flex-direction: row;
+    margin-left: 60px;
+    margin-right: 131px;
+    padding-left: 57px;
+    justify-content: space-between;
+}
+
+.member {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 90px;
+    padding-right: 90px;
+}
+
+.member p {
+    text-align: justify;
+}
+
+.member img {
+    width: 160px;
+    height: 160px;
+    /*Estilizar el borde de la imagen*/
+}
+
+
+/*FOOTER*/
+
+footer {
+    display:flex;
+    margin-top: 120px;
+    margin-left:60px;
+    justify-content: space-between;
+}
+
+.brandNameFooter {
+    padding-left: 57px;
+}
+
+.footerLogo {
+    display: flex;
+    align-items: center;
+    padding-right: 10px;
+}
+
+.footerLogo h1 {
+    font-size: 23px;
+    padding-right: 5px;
+}
+
+.footerLogo img {
+    border: 1px solid red;
+    width: 50px;
+}
+
+
+
 
 
 
