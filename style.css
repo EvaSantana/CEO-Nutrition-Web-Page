@@ -112,6 +112,43 @@ h1 {
     justify-content: center;
     flex-direction: column;
     margin-left: 60px;
+    margin-right: 47px;
+}
+
+@keyframes moveLeft {
+    0% {
+        translate: 1000px;
+    }
+    90% {
+        translate: -5px;
+    }
+    100% {
+        translate: 0px;
+    }
+}
+
+.slideLeft {
+    overflow: hidden;
+    animation: moveLeft 5s ease;
+}
+
+@keyframes moveRight {
+    0% {
+        translate: -1000px;
+    }
+
+    90% {
+        translate: 5px;
+    }
+
+    100% {
+        translate: 0px;
+    }
+}
+
+.slideRight {
+    overflow: hidden;
+    animation: moveRight 5s ease;
 }
 
 /*SERVICIO 1*/
@@ -119,24 +156,20 @@ h1 {
 .services h1 {
     margin: auto;
     padding-bottom: 90px;
-
 }
 
 .service1 {
     display: flex;
     height: 400px;
-
-
 }
 
-.service1Text {
+#service1Text {
     width: 80%;
     padding-left: 60px;
     padding-right: 170px;
-
 }
 
-.service1Text p {
+#service1Text p {
     text-align: justify;
 }
 
@@ -156,7 +189,6 @@ h1 {
     
     }
 
-
 /*SERVICIO 2*/
 
 .services h1 {
@@ -170,13 +202,13 @@ h1 {
     margin-top: 50px;
 }
 
-.service2Text {
+#service2Text {
     width: 80%;
     padding-left: 57px;
     padding-right: 60px;
 }
 
-.service2Text p {
+#service2Text p {
     text-align: justify;
 }
 
@@ -205,14 +237,14 @@ h1 {
 
 }
 
-.service3Text {
+#service3Text {
     width: 80%;
     padding-left: 60px;
     padding-right: 170px;
 
 }
 
-.service3Text p {
+#service3Text p {
     text-align: justify;
 }
 
@@ -245,13 +277,13 @@ h1 {
     margin-top: 50px;
 }
 
-.service4Text {
+#service4Text {
     width: 80%;
     padding-left: 57px;
     padding-right: 60px;
 }
 
-.service4Text p {
+#service4Text p {
     text-align: justify;
 }
 
@@ -261,7 +293,6 @@ h1 {
     display: flex;
     justify-content: center;
     margin-right: 131px;
-
 }
 
 .service4Image img {
