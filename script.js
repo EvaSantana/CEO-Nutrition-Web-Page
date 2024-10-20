@@ -27,3 +27,4 @@ menuLinks.forEach(function (link) {
         menuContent.classList.remove('active');
     });
 });
+
