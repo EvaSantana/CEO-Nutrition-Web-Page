@@ -30,7 +30,7 @@ html {
     align-items: flex-end;
     padding-top: 10px;
     background-color: #FFBE88;
-
+    z-index: 1000;
 
 }
 
@@ -146,19 +146,13 @@ html {
 
 .contactUsBtn {
 
-    /*temporal*/
     border: none;
     width: 100%;
     height: 100%;
     background-color: #FFBE88;
     position: sticky;
-
-   
     display: inline-block;
     padding: 10px 20px;
-    
-    
-    
     background: transparent;
     cursor: pointer;
     transition: color 0.8s ease-in-out;
@@ -179,6 +173,77 @@ html {
 
 }
 
+/*ESTILIZADO DEL FORMULARIO*/
+
+.contactFormOverlay {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(14, 14, 14);
+    
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: right 0.6s ease;
+}
+
+.contactForm {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 600px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.contactForm h2 {
+    margin-bottom: 20px;
+}
+
+.contactForm label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+.contactForm input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.contactForm button {
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.contactForm button:hover {
+    background-color: #2980b9;
+}
+
+/* Botón de cerrar formulario */
+.closeFormBtn {
+    background-color: #e74c3c;
+    margin-left: 10px;
+}
+
+.closeFormBtn:hover {
+    background-color: #c0392b;
+}
+
+/* Mostrar formulario al hacer clic */
+.contactFormOverlay.active {
+    right: 0;
+}
+/*ESTILIZADO DE FORMULARIO - FIN*/
 
 /*NAVBAR FIN*/
 

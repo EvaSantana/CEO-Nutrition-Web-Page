@@ -28,3 +28,102 @@ menuLinks.forEach(function (link) {
     });
 });
 
+//CREACIÓN DE FORMULARIO
+
+const contactUsBtn = document.querySelector('.contactUsBtn');
+const contactFormOverlay = document.querySelector('.contactFormOverlay');
+
+function createContactForm() { 
+    contactFormOverlay.innerHTML = '';
+
+    const form = document.createElement('form');
+    form.classList.add('contactForm');
+
+    //Crear elementos del FORM uno a uno
+
+    const title = document.createElement('h2');
+    title.textContent = 'Contacta con nuestras profesionales';
+    form.appendChild(title);
+
+    const firstNameLabel = document.createElement('label');
+    firstNameLabel.setAttribute('for', 'firstName');
+    firstNameLabel.textContent = 'Nombre:';
+    form.appendChild(firstNameLabel);
+
+    const firstNameInput = document.createElement('input');
+    firstNameInput.setAttribute('type', 'text');
+    firstNameInput.setAttribute('id', 'firstName');
+    firstNameInput.setAttribute('name', 'firstName');
+    firstNameInput.required = true;
+    form.appendChild(firstNameInput);
+
+
+    const lastNameLabel = document.createElement('label');
+    lastNameLabel.setAttribute('for', 'lastName');
+    lastNameLabel.textContent = 'Apellidos:';
+    form.appendChild(lastNameLabel);
+
+    const lastNameInput = document.createElement('input');
+    lastNameInput.setAttribute('type', 'text');
+    lastNameInput.setAttribute('id', 'lastName');
+    lastNameInput.setAttribute('name', 'lastName');
+    lastNameInput.required = true;
+    form.appendChild(lastNameInput);
+
+
+    const emailLabel = document.createElement('label');
+    emailLabel.setAttribute('for', 'email');
+    emailLabel.textContent = 'Correo electrónico:';
+    form.appendChild(emailLabel);
+
+    const emailInput = document.createElement('input');
+    emailInput.setAttribute('type', 'email');
+    emailInput.setAttribute('id', 'email');
+    emailInput.setAttribute('name', 'email');
+    emailInput.required = true;
+    form.appendChild(emailInput);
+
+
+    //Crear LABEL + INPUT de teléfono de contacto
+
+    const phoneLabel = document.createElement('label');
+    phoneLabel.setAttribute('for', 'phone');
+    phoneLabel.textContent = 'Teléfono de contacto:';
+    form.appendChild(phoneLabel);
+
+    const phoneInput = document.createElement('input');
+    phoneInput.setAttribute('type', 'number');
+    phoneInput.setAttribute('id', 'phone');
+    phoneInput.setAttribute('name', 'phone');
+    phoneInput.required = true;
+    form.appendChild(phoneInput);
+
+    // Botón de enviar
+    const submitBtn = document.createElement('button');
+    submitBtn.setAttribute('type', 'submit');
+    submitBtn.textContent = 'Enviar';
+    form.appendChild(submitBtn);
+
+    // Botón de cerrar
+    const closeFormBtn = document.createElement('button');
+    closeFormBtn.setAttribute('type', 'button');
+    closeFormBtn.classList.add('closeFormBtn');
+    closeFormBtn.textContent = 'Cerrar';
+    form.appendChild(closeFormBtn);
+
+    //Añadir formulario al overlay
+    contactFormOverlay.appendChild(form);
+
+    // Añadir evento para cerrar el formulario
+    closeFormBtn.addEventListener('click', function () {
+        contactFormOverlay.classList.remove('active');
+    });
+
+    
+}
+
+// Al hacer clic en el botón "Contact Us", crear y mostrar el formulario
+contactUsBtn.addEventListener('click', function () {
+    createContactForm();
+    contactFormOverlay.classList.add('active');
+});
