@@ -12,6 +12,8 @@ body {
     position: relative;
 }
 
+/*NAVBAR INICIO*/
+
 .navbar {
     display: flex;
     position: fixed;
@@ -53,11 +55,61 @@ body {
     border-right: none;
     border-top: 2px solid red;
     border-bottom: 2px solid red;
-    
     width: 100%;
     background-color: #FFBE88;
     position: sticky;
 }
+
+.menuButton img {
+    cursor:pointer;
+}
+
+/*CONTENIDO DEL MENU DESPLEGABLE*/
+
+.menuContent {
+    display: none;
+    /* Oculto por defecto */
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 200px;
+    height: 100vh;
+    background-color: #FFBE88;
+    z-index: 1000;
+}
+
+.menuContent.active { /*lo que aqui escrito está muestra cómo se ve el menú desplegable al clicarlo*/
+    display: block;
+    width:400px;
+    
+}
+
+.menuContent.active ul {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    margin-top:200px;
+    padding-left: 25px;
+    margin-right:20px;
+}
+
+.menuContent.active li {
+    margin-left: 20px;
+    margin-bottom: 70px;
+}
+
+.menuContent.active a {
+    text-decoration: none;
+    font-size: 45px;
+    font-weight:normal;
+    color: white;
+}
+
+.menuContent.active a:hover {
+    color:#a3612a;
+}
+
+
 
 .contactUsBtn {
     
@@ -75,6 +127,8 @@ body {
 }
 
 /*NAVBAR FIN*/
+
+
 .background {
     background-repeat: no-repeat;
     object-fit: cover;
@@ -107,7 +161,7 @@ h1 {
 
 /*NUESTROS SERVICIOS - INICIO*/
 
-.services {
+#services {
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -116,7 +170,7 @@ h1 {
 
 /*SERVICIO 1*/
 
-.services h1 {
+#services h1 {
     margin: auto;
     padding-bottom: 90px;
 
@@ -272,7 +326,7 @@ h1 {
 
 /*REVIEWS*/
 
-.reviews {
+#reviews {
     display: flex;
     flex-direction: column;
     margin-top: 120px;
@@ -283,7 +337,7 @@ h1 {
     box-shadow: 0 30px 40px -2px #CDB3D4
 }
 
-.reviews h1 {
+#reviews h1 {
     margin: auto;
     padding-bottom: 90px;
 }
@@ -318,7 +372,7 @@ h1 {
 
 /*TEAM MEMBERS*/
 
-.team {
+#team {
     display: flex;
     flex-direction: column;
     margin-top: 120px;

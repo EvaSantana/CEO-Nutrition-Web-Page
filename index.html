@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
-    <script href="./script.js" defer></script>
+    <script src="./script.js" defer></script>
 </head>
 
 <body>
@@ -31,7 +31,7 @@
                 <!-- Círculos pie de foto - cómo crear-->
             </div>
 
-            <div class="services">
+            <div id="services">
                 <h1>Nuestros Servicios</h1>
                 <div class="service1">
                     <div class="service1Image">
@@ -150,7 +150,7 @@
                 </div>
             </div>
 
-            <div class="reviews">
+            <div id="reviews">
                 <h1>Lo que opinan nuestros clientes</h1>
                 <div class="reviewsCarrusel">
                     <div class="reviewer">
@@ -200,7 +200,7 @@
                 </div>
             </div>
 
-            <div class="team">
+            <div id="team">
                 <h1>Nuestro equipo</h1>
                 <div class="teamMembers">
                     <div class="member">
@@ -271,12 +271,24 @@
             </footer>
         </section>
 
-        <header class="navbar">
+        <header class="navbar" id="navbar">
             <div class="brandName">
                 <h1>NutriWealth</h1>
                 <img src="./Images/LOGO.png">
             </div>
-            <button class="menuButton" type="button"><img src="./Images/MENU.png"></button>
+
+            <button class="menuButton" id="menuButton" type="button">
+                <img src="./Images/MENU.png">
+            </button>
+            
+            <div class="menuContent" id="menuContent">
+                <ul>
+                    <li><a href="#services">Nuestros servicios</a></li>
+                    <li><a href="#reviews">Opiniones</a></li>
+                    <li><a href="#team">Nuestro equipo</a></li>
+                </ul>
+            </div>
+
             <button class="contactUsBtn" type="button"><img src="Images/CONTACT-US.png"></button>
         </header>
     </div>
