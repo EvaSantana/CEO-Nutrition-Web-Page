@@ -5,6 +5,12 @@ body {
 
 }
 
+html {
+    scroll-behavior: smooth;
+    /*scroll suave al clicar las secciones desde navbar*/
+}
+
+
 .container {
     display: flex;
     width: 100vw;
@@ -24,7 +30,7 @@ body {
     align-items: flex-end;
     padding-top: 10px;
     background-color: #FFBE88;
-    
+
 
 }
 
@@ -45,28 +51,28 @@ body {
 }
 
 .brandName img {
-    
+
     width: 50px;
 }
 
 .menuButton {
-    border-left:none;
+    border-left: none;
     border-right: none;
-    border-top: 2px solid #a3612a;
-    border-bottom: 2px solid #a3612a;
+    border-top: 3px solid #fc9038f1;
+    border-bottom: 3px solid #fc9038f1;
     width: 100%;
     background-color: #FFBE88;
     position: sticky;
 }
 
 .menuButton img {
-    cursor:pointer;
+    cursor: pointer;
 }
 
 /*CONTENIDO DEL MENU DESPLEGABLE*/
 
 .menuContent {
-    
+
     /* Oculto por defecto */
     position: fixed;
     top: 0;
@@ -79,19 +85,42 @@ body {
     transition: width 1s ease;
 }
 
-.menuContent.active { /*lo que aqui escrito está muestra cómo se ve el menú desplegable al clicarlo*/
+.menuContent ul {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    margin-top: 200px;
+    padding-left: 25px;
+    margin-right: 20px;
+    opacity: 0;
+    /* Comienza invisible */
+    visibility: hidden;
+    /* No es visible */
+    transition: opacity 0s ease, visibility 0s 0s;
+}
+
+.menuContent.active {
+    /*lo que aqui escrito está muestra cómo se ve el menú desplegable al clicarlo*/
     display: block;
-    width:400px;
-    
+    width: 400px;
+
 }
 
 .menuContent.active ul {
     display: flex;
     flex-direction: column;
     list-style-type: none;
-    margin-top:200px;
+    margin-top: 200px;
     padding-left: 25px;
-    margin-right:20px;
+    margin-right: 20px;
+
+    opacity: 1;
+    /* Visible cuando la barra está activa */
+    visibility: visible;
+    /* Hacemos la lista visible */
+    transition: opacity 0.3s ease;
+    /* Aparece de manera suave */
+    transition-delay: 0.2s;
 }
 
 .menuContent.active li {
@@ -102,31 +131,54 @@ body {
 .menuContent.active a {
     text-decoration: none;
     font-size: 45px;
-    font-weight:normal;
+    font-weight: normal;
     color: white;
     transition: color 0.70s ease;
 }
 
 .menuContent.active a:hover {
-    color:#a3612a;
+    color: #fc9038f1;
 }
 
+/*FIN DEL CONTENIDO DEL MENU DESPLEGABLE*/
 
+/*BOTÓN DEL CONTACT US - FORMULARIO*/
 
 .contactUsBtn {
-    
+
     /*temporal*/
-    border:none;
+    border: none;
     width: 100%;
     height: 100%;
     background-color: #FFBE88;
     position: sticky;
+
+   
+    display: inline-block;
+    padding: 10px 20px;
+    
+    
+    
+    background: transparent;
+    cursor: pointer;
+    transition: color 0.8s ease-in-out;
+    background-image: linear-gradient(to top, #fc9038f1 100%, transparent 0%);
+    background-size: 100% 0%;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    transition: background-size 0.8s ease-in-out;
+}
+
+.contactUsBtn:hover {
+    background-size: 100% 100%;
 }
 
 .contactUsBtn img {
     /*subir imagen del sobre*/
     padding-bottom: 500px;
+
 }
+
 
 /*NAVBAR FIN*/
 
@@ -140,10 +192,11 @@ body {
     width: 100vw;
     opacity: 50%;
 }
+
 .mainBody {
     display: flex;
     flex-direction: column;
-    margin-right:144px;
+    margin-right: 144px;
     width: 100%;
 }
 
@@ -208,9 +261,9 @@ h1 {
 .service1Image img {
     width: 300px;
     height: auto;
-    border-radius: 55% 75% 10% 25%; 
-    
-    }
+    border-radius: 55% 75% 10% 25%;
+
+}
 
 
 /*SERVICIO 2*/
@@ -278,7 +331,7 @@ h1 {
     display: flex;
     justify-content: center;
     padding-left: 20px;
-    
+
 
 }
 
@@ -333,7 +386,7 @@ h1 {
     flex-direction: column;
     margin-top: 120px;
     background-color: white;
-    padding-top:170px;
+    padding-top: 170px;
     padding-bottom: 100px;
     border-radius: 50% 50% 0 0;
     box-shadow: 0 30px 40px -2px #CDB3D4
@@ -378,7 +431,7 @@ h1 {
     display: flex;
     flex-direction: column;
     margin-top: 120px;
-    
+
 }
 
 .team h1 {
@@ -401,13 +454,13 @@ h1 {
     align-items: center;
     padding: 40px 45px;
     border: 1px solid red;
-    width:250px;
-    height:500px;
-    margin-left:20px;
-    margin-right:20px;
+    width: 250px;
+    height: 500px;
+    margin-left: 20px;
+    margin-right: 20px;
     border-radius: 10px 100px / 120px;
     background-color: #e3d2e9;
-   
+
 }
 
 .member p {
@@ -439,8 +492,10 @@ footer {
 
 .brandNameFooter p {
     margin-top: 0px;
-    padding-bottom: 20px;;
+    padding-bottom: 20px;
+    ;
 }
+
 .footerLogo {
     display: flex;
     align-items: center;
