@@ -62,4 +62,7 @@ services2.forEach(function (service) {
 
 //REVIEWS CARRUSEL//
 
+const reviewers = document.querySelectorAll(".reviewsCarrusel reviewers");
+let slideIndex = 0;
 
+function

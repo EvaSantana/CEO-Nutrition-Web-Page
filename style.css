@@ -115,6 +115,11 @@ h1 {
     margin-right: 47px;
 }
 
+#services h1 {
+    margin: auto;
+    padding-bottom: 90px;
+}
+
 @keyframes moveLeft {
     0% {
         translate: 1000px;
@@ -165,20 +170,9 @@ h1 {
 
 /*SERVICIO 1*/
 
-.services h1 {
-    margin: auto;
-    padding-bottom: 90px;
-}
-
 #service1 {
     display: flex;
     height: 400px;
-}
-
-#service1Text {
-    width: 80%;
-    padding-left: 60px;
-    padding-right: 170px;
 }
 
 #service1Text p {
@@ -209,12 +203,6 @@ h1 {
     margin-top: 50px;
 }
 
-#service2Text {
-    width: 80%;
-    padding-left: 57px;
-    padding-right: 60px;
-}
-
 #service2Text p {
     text-align: justify;
 }
@@ -225,7 +213,6 @@ h1 {
     display: flex;
     justify-content: center;
     margin-right: 130px;
-
 }
 
 .service2Image img {
@@ -241,14 +228,6 @@ h1 {
     display: flex;
     height: 400px;
     margin-top: 50px;
-
-}
-
-#service3Text {
-    width: 80%;
-    padding-left: 60px;
-    padding-right: 170px;
-
 }
 
 #service3Text p {
@@ -274,12 +253,6 @@ h1 {
     display: flex;
     height: 400px;
     margin-top: 50px;
-}
-
-#service4Text {
-    width: 80%;
-    padding-left: 57px;
-    padding-right: 60px;
 }
 
 #service4Text p {
@@ -319,6 +292,7 @@ h1 {
 }
 
 .reviewsCarrusel {
+    position: relative;
     display: flex;
     flex-direction: row;
     margin-left: 60px;
