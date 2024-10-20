@@ -1,5 +1,7 @@
 //SERVICES//
-// ESTO LAS SLIDE TODAS A LA VEZ CUANDO EL MOUSE ESTA ENCIMA DEL AREA DE TEXTO//
+
+/*
+ESTO LAS SLIDE TODAS A LA VEZ CUANDO EL MOUSE ESTA ENCIMA DEL AREA DE TEXTO
 
 const service1Text = document.getElementById("service1Text");
 const service2Text = document.getElementById("service2Text");
@@ -24,24 +26,40 @@ function slide() {
         service4Text.classList.add("slideRight");
     };
 }
+*/
 
+const services = document.querySelectorAll(".service13");
 
-// NO OLVIDAR QUITAR ESTO AL FINAL //
-service1Text.addEventListener("animationend", slideEnd);
-service3Text.addEventListener("animationend", slideEnd);
-service2Text.addEventListener("animationend", slideEnd);
-service4Text.addEventListener("animationend", slideEnd);
+const observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+        if(entry.isIntersecting) {
+            entry.target.classList.add("slideLeft");
+        } else {
+            entry.target.classList.remove("slideLeft"); 
+        }
+    });
+});
 
-function slideEnd() {
-    if (service1Text && service3Text && service2Text && service4Text) {
-        service1Text.classList.remove("slideLeft");
-        service3Text.classList.remove("slideLeft");
-        service2Text.classList.remove("slideRight");
-        service4Text.classList.remove("slideRight");
-    };
-}
-// NO OLVIDAR QUITAR ESTO AL FINAL //
+services.forEach( function(service) {
+    observer.observe(service);
+});
 
+const services2 = document.querySelectorAll(".service24");
+
+const observer2 = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+            entry.target.classList.add("slideRight");
+        } else {
+            entry.target.classList.remove("slideRight");
+        }
+    });
+});
+
+services2.forEach(function (service) {
+    observer2.observe(service);
+});
 
 //REVIEWS CARRUSEL//
+
 
