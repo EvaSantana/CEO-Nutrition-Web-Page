@@ -84,8 +84,6 @@ function createContactForm() {
     form.appendChild(emailInput);
 
 
-    //Crear LABEL + INPUT de teléfono de contacto
-
     const phoneLabel = document.createElement('label');
     phoneLabel.setAttribute('for', 'phone');
     phoneLabel.textContent = 'Teléfono de contacto:';
@@ -98,11 +96,38 @@ function createContactForm() {
     phoneInput.required = true;
     form.appendChild(phoneInput);
 
+
     // Botón de enviar
     const submitBtn = document.createElement('button');
     submitBtn.setAttribute('type', 'submit');
+    submitBtn.classList.add('submitBtn');
     submitBtn.textContent = 'Enviar';
     form.appendChild(submitBtn);
+
+    // Añadir evento para el envío del formulario
+    form.addEventListener('submit', function (event) {
+        event.preventDefault(); 
+
+        // Mostrar el mensaje pop-up
+        showPopup('Formulario enviado con éxito. ¡Gracias por contactarnos!');
+
+        // limpiar el formulario
+        form.reset();
+    });
+
+    function showPopup(message) {
+        const popup = document.createElement('div');
+        popup.classList.add('popup'); 
+        popup.textContent = message;
+
+        // Añadir el pop-up al contenedor del formulario
+        contactFormOverlay.appendChild(popup);
+
+        // Desaparecer el pop-up después de 3 segundos
+        setTimeout(() => {
+            popup.remove();
+        }, 3000);
+    }
 
     // Botón de cerrar
     const closeFormBtn = document.createElement('button');

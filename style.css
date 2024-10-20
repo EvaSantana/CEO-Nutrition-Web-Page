@@ -181,7 +181,7 @@ html {
     right: -100%;
     width: 100%;
     height: 100vh;
-    background-color: rgb(14, 14, 14);
+    background-color: #CDB3D4;
     
     z-index: 999;
     display: flex;
@@ -230,19 +230,45 @@ html {
 }
 
 /* Botón de cerrar formulario */
-.closeFormBtn {
-    background-color: #e74c3c;
+.closeFormBtn { /*Por qué los botones siguen quedándose de color azul?*/
+    background-color: #E7B7C8;
     margin-left: 10px;
 }
 
 .closeFormBtn:hover {
     background-color: #c0392b;
 }
+/*Botón de "enviar"*/
+
+.submitBtn {
+    background-color: #CDB3D4;
+    margin-left: 10px;
+}
+
+.submitBtn:hover {
+    background-color: #E7B7C8;
+}
 
 /* Mostrar formulario al hacer clic */
 .contactFormOverlay.active {
     right: 0;
 }
+
+/*ESTILIZADO DEL ELEMENTO POP-UP*/
+.popup { /*Definir aqui el estilo del pop-up*/
+    position: fixed;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 20px;
+    border-radius: 5px;
+    z-index: 1000;
+    text-align: center;
+}
+
+
 /*ESTILIZADO DE FORMULARIO - FIN*/
 
 /*NAVBAR FIN*/
