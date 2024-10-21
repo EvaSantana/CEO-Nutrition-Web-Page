@@ -10,7 +10,6 @@ html {
     /*scroll suave al clicar las secciones desde navbar*/
 }
 
-
 .container {
     display: flex;
     width: 100vw;
@@ -312,13 +311,15 @@ h1 {
     justify-content: center;
     flex-direction: column;
     margin-left: 60px;
+    margin-top: 150px;
 }
 
 /*SERVICIO 1*/
 
 #services h1 {
     margin: auto;
-    padding-bottom: 90px;
+
+    
 
 }
 
@@ -333,7 +334,14 @@ h1 {
     width: 80%;
     padding-left: 60px;
     padding-right: 170px;
+    margin-top: 50px;
 
+}
+
+.service1Text h2 {
+    color: #024969;
+    font-size: 25px;
+    font-weight: normal;
 }
 
 .service1Text p {
@@ -346,6 +354,7 @@ h1 {
     display: flex;
     justify-content: center;
     padding-left: 20px;
+    margin-top: 50px;
 
 }
 
@@ -359,22 +368,34 @@ h1 {
 
 /*SERVICIO 2*/
 
-.services h1 {
+#services h1 {
     margin: auto;
     padding-bottom: 50px;
+
+    color: #056491;
+    font-size: 50px;
+    font-weight: normal;
 }
 
 .service2 {
     display: flex;
     height: 400px;
-    margin-top: 50px;
+    margin-top: 80px;
 }
 
 .service2Text {
     width: 80%;
-    padding-left: 57px;
+    padding-left: 80px;
     padding-right: 60px;
 }
+
+.service2Text h2 {
+    color: #024969;
+    font-size: 25px;
+    font-weight: normal;
+    margin-top:50px;
+}
+
 
 .service2Text p {
     text-align: justify;
@@ -386,13 +407,14 @@ h1 {
     display: flex;
     justify-content: center;
     margin-right: 130px;
+    margin-top: 50px;
 
 }
 
 .service2Image img {
     width: 300px;
     height: auto;
-    border-radius: 55% 25% 55% 25%;
+    border-radius: 55% 25% 55% 85%;
 }
 
 
@@ -409,7 +431,14 @@ h1 {
     width: 80%;
     padding-left: 60px;
     padding-right: 170px;
+    margin-top: 50px;
 
+}
+
+.service3Text h2 {
+    color: #024969;
+    font-size: 25px;
+    font-weight: normal;
 }
 
 .service3Text p {
@@ -422,6 +451,7 @@ h1 {
     display: flex;
     justify-content: center;
     padding-left: 20px;
+    margin-top: 50px;
 
 
 }
@@ -447,8 +477,15 @@ h1 {
 
 .service4Text {
     width: 80%;
-    padding-left: 57px;
+    padding-left: 80px;
     padding-right: 60px;
+    margin-top: 50px;
+}
+
+.service4Text h2 {
+    color: #024969;
+    font-size: 25px;
+    font-weight: normal;
 }
 
 .service4Text p {
@@ -461,13 +498,14 @@ h1 {
     display: flex;
     justify-content: center;
     margin-right: 131px;
+    margin-top: 50px;
 
 }
 
 .service4Image img {
     width: 300px;
     height: auto;
-    border-radius: 55% 25% 55% 25%;
+    border-radius: 55% 25% 25% 25%;
 }
 
 /*REVIEWS*/
@@ -486,6 +524,10 @@ h1 {
 #reviews h1 {
     margin: auto;
     padding-bottom: 90px;
+
+    color: #056491;
+    font-size: 40px;
+    font-weight: normal;
 }
 
 .reviewsCarrusel {
@@ -512,6 +554,12 @@ h1 {
     border-radius: 100%;
 }
 
+.reviewer h2 {
+    color: #056491;
+    font-size: 20px;
+    font-weight: normal;
+}
+
 .reviewer p {
     text-align: center;
 }
@@ -521,13 +569,18 @@ h1 {
 #team {
     display: flex;
     flex-direction: column;
-    margin-top: 120px;
+    margin-top: 130px;
+    margin-bottom:90px;
 
 }
 
-.team h1 {
+#team h1 {
     margin: auto;
     padding-bottom: 90px;
+
+    color: #056491;
+    font-size: 50px;
+    font-weight:normal;
 }
 
 .teamMembers {
@@ -544,7 +597,6 @@ h1 {
     flex-direction: column;
     align-items: center;
     padding: 40px 45px;
-    border: 1px solid red;
     width: 250px;
     height: 500px;
     margin-left: 20px;
@@ -552,6 +604,11 @@ h1 {
     border-radius: 10px 100px / 120px;
     background-color: #e3d2e9;
 
+}
+
+.member h2 {
+    font-weight: normal;
+    color: #614068;
 }
 
 .member p {
@@ -562,7 +619,7 @@ h1 {
     width: 160px;
     height: 160px;
     border-radius: 100%;
-    border: 1px solid red;
+
     /*Estilizar el borde de la imagen*/
 }
 
@@ -572,7 +629,7 @@ h1 {
 footer {
     display: flex;
     margin-top: 120px;
-    justify-content: space-between;
+    
     background-color: white;
 }
 
@@ -591,22 +648,39 @@ footer {
     display: flex;
     align-items: center;
     padding-right: 10px;
+    background-color: #FFBE88;
 }
 
 .footerLogo h1 {
     font-size: 23px;
     padding-right: 5px;
+    padding-left: 20px;
 }
 
 .footerLogo img {
-    border: 1px solid red;
+    
     width: 50px;
+    
 }
 
 .contact {
     line-height: 8px;
+    margin-left: 150px;
 }
 
+.socialMedia {
+    margin-left:150px;
+}
+
+.socialMedia h3 {
+    margin-top:30px;
+    margin-bottom:0;
+}
+
+.socialMedia img {
+    width:40px;
+    height:40px;
+}
 
 
 
