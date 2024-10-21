@@ -203,3 +203,36 @@ document.addEventListener('DOMContentLoaded', () => {
     autoScrollInterval = setInterval(nextImage, 5000);
 
 });
+
+
+
+// SERVICES - TEXTOS DESPLAZABLES
+
+const services = document.querySelectorAll(".service13");
+
+const observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+            entry.target.classList.add("slideLeft");
+        }
+    });
+});
+
+services.forEach(function (service) {
+    observer.observe(service);
+});
+
+
+const services2 = document.querySelectorAll(".service24");
+
+const observer2 = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+            entry.target.classList.add("slideRight");
+        }
+    });
+});
+
+services2.forEach(function (service) {
+    observer2.observe(service);
+});

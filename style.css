@@ -174,7 +174,7 @@ html {
 .menuContent.active {
     /*lo que aqui escrito está muestra cómo se ve el menú desplegable al clicarlo*/
     display: block;
-    width: 400px;
+    width: 250px;
 
 }
 
@@ -183,8 +183,8 @@ html {
     flex-direction: column;
     list-style-type: none;
     margin-top: 200px;
-    padding-left: 25px;
-    margin-right: 20px;
+    
+    margin-right: 50px;
 
     opacity: 1;
     /* Visible cuando la barra está activa */
@@ -202,7 +202,7 @@ html {
 
 .menuContent.active a {
     text-decoration: none;
-    font-size: 45px;
+    font-size: 20px;
     font-weight: normal;
     color: white;
     transition: color 0.70s ease;
@@ -269,6 +269,7 @@ html {
     width: 80%;
     max-width: 600px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    scale: 0.8;
 }
 
 .contactForm h2 {
@@ -327,6 +328,9 @@ html {
 .contactFormOverlay.active {
     right: 0;
 }
+
+
+
 
 /*ESTILIZADO DEL ELEMENTO POP-UP*/
 .popup {
@@ -387,26 +391,51 @@ h1 {
     justify-content: center;
     flex-direction: column;
     margin-left: 60px;
+    margin-right: 47px;
     margin-top: 150px;
 }
 
+/*CODIGO CELINA SLIDE*/
+
+.slideLeft {
+    transform: translateX(-100%);
+    animation: moveLeft 5s ease forwards;
+}
+
+.slideRight {
+    transform: translateX(100%);
+    animation: moveRight 5s ease forwards;
+}
+
+.service13 {
+    width: 80%;
+    padding-left: 57px;
+    padding-right: 60px
+}
+
+.service24 {
+    width: 80%;
+    padding-left: 57px;
+    padding-right: 60px;
+}
+
+/*CODIGO CELINA SLIDE - END*/
+
 /*SERVICIO 1*/
+
+
+#service1 {
+    display: flex;
+    height: 400px;
+    
+    
+}
 
 #services h1 {
     margin: auto;
-
-
-
 }
 
-.service1 {
-    display: flex;
-    height: 400px;
-
-
-}
-
-.service1Text {
+#service1Text {
     width: 80%;
     padding-left: 60px;
     padding-right: 170px;
@@ -414,13 +443,13 @@ h1 {
 
 }
 
-.service1Text h2 {
+#service1Text h2 {
     color: #024969;
     font-size: 25px;
     font-weight: normal;
 }
 
-.service1Text p {
+#service1Text p {
     text-align: justify;
 }
 
@@ -447,25 +476,24 @@ h1 {
 #services h1 {
     margin: auto;
     padding-bottom: 50px;
-
     color: #056491;
     font-size: 50px;
     font-weight: normal;
 }
 
-.service2 {
+#service2 {
     display: flex;
     height: 400px;
     margin-top: 80px;
 }
 
-.service2Text {
+#service2Text {
     width: 80%;
     padding-left: 80px;
     padding-right: 60px;
 }
 
-.service2Text h2 {
+#service2Text h2 {
     color: #024969;
     font-size: 25px;
     font-weight: normal;
@@ -473,7 +501,7 @@ h1 {
 }
 
 
-.service2Text p {
+#service2Text p {
     text-align: justify;
 }
 
@@ -496,14 +524,14 @@ h1 {
 
 /*SERVICIO 3*/
 
-.service3 {
+#service3 {
     display: flex;
     height: 400px;
     margin-top: 50px;
 
 }
 
-.service3Text {
+#service3Text {
     width: 80%;
     padding-left: 60px;
     padding-right: 170px;
@@ -511,13 +539,13 @@ h1 {
 
 }
 
-.service3Text h2 {
+#service3Text h2 {
     color: #024969;
     font-size: 25px;
     font-weight: normal;
 }
 
-.service3Text p {
+#service3Text p {
     text-align: justify;
 }
 
@@ -540,31 +568,31 @@ h1 {
 
 /*SERVICIO 4*/
 
-.services h1 {
+#services h1 {
     margin: auto;
     padding-bottom: 50px;
 }
 
-.service4 {
+#service4 {
     display: flex;
     height: 400px;
     margin-top: 50px;
 }
 
-.service4Text {
+#service4Text {
     width: 80%;
     padding-left: 80px;
     padding-right: 60px;
     margin-top: 50px;
 }
 
-.service4Text h2 {
+#service4Text h2 {
     color: #024969;
     font-size: 25px;
     font-weight: normal;
 }
 
-.service4Text p {
+#service4Text p {
     text-align: justify;
 }
 
@@ -765,4 +793,30 @@ footer {
 img {
     width: 100px;
     height: auto;
+}
+
+/*MEDIA QUERIES PARA TEXTOS DESLIZABLES DE SERVICES*/
+
+@keyframes moveLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes moveRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
 }
