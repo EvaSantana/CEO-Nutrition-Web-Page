@@ -140,9 +140,20 @@ body {
     height: 650px;
     display: none; /*oculta imagenes al principio*/
     border-radius: 10%;
-    opacity: 0;
+    opacity: 5;
     transition: opacity 2ms ease-in-out; /* Durata e tipo di transizione */
     transition-delay: 2s;
+    }
+
+    .fade-in {
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+    }
+
+@keyframes fadeIn {
+  to {
+    opacity: 5;
+  }
 }
 
 .active {
