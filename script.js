@@ -53,9 +53,10 @@ const observer2 = new IntersectionObserver(function(entries) {
 });
 
 services2.forEach(function (service) {
-    d
     observer2.observe(service);
 });
+
+//REVIEWS//
 
 const reviewsCarrusel = document.querySelector(".reviewsCarrusel");
 const reviewers = document.querySelectorAll(".reviewsCarrusel .reviewer");
@@ -70,10 +71,9 @@ function showReviewer(index) {
     reviewers.forEach((reviewer, i) => {
         reviewer.classList.remove("active"); // Remueve la clase activa de todos
         if (i === index) {
-            reviewer.classList.add("active")}
-    }
-    );
-    
+            reviewer.classList.add("active");
+        }
+    });
 }
 
 function autoPlay() {
@@ -85,11 +85,8 @@ function nextSlide() {
     showReviewer(currentReview);
 }
 
-// Inicia el autoplay
 autoPlay();
-showReviewer(currentReview); // Muestra los revisores iniciales
-
-
+showReviewer(currentReview);
 
 
 

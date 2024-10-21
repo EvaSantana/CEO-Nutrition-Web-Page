@@ -273,7 +273,6 @@ h1 {
     /* Asegúrate de que los elementos que no se muestran no aparezcan */
     height: 500px;
     width: 50%;
-    overflow: hidden;
     /* Ajusta según tu diseño */
     align-items: center;
     align-self: center;
