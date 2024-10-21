@@ -18,6 +18,79 @@ html {
     margin-right: 10%;
 }
 
+/*CARRUSEL CABECERO*/
+
+.carousel-container {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: space-around;
+    align-self: center;
+    width: 100vw;
+    height: 500px;
+    opacity: 80%;
+    border: none;
+    margin: 0;
+    overflow: hidden;
+    box-shadow: 0 4px 10px gray;
+    transition: transform 0.5s ease-in-out;
+    transition-delay: 2ms;
+    border-radius: 3%;
+
+}
+
+.carousel-container .texto1 {
+    position: absolute;
+    display: inherit;
+    font-size: 35px;
+    padding-right: 10px;
+    padding-left: 20px;
+    top: 20%;
+    left: 50%;
+    transform: translate(-80%, -20%);
+    color: #036694;
+    text-align: left;
+    z-index: 1;
+    font-family: "Montserrat", sans-serif;
+    font-style: italic;
+    text-justify: inter-ideograph;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+
+.carouselImage {
+    width: 880px;
+    height: 650px;
+    display: none;
+    border-radius: 10%;
+    opacity: 5;
+    transition: opacity 2ms ease-in-out;
+    transition-delay: 2s;
+
+}
+
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+
+
+
+@keyframes fadeIn {
+    to {
+        opacity: 5;
+    }
+}
+
+.active {
+    scale: 1.5;
+    display: block;
+    opacity: 5;
+    transition-delay: 1s;
+}
+
+
+
 /*NAVBAR INICIO*/
 
 .navbar {
@@ -183,7 +256,7 @@ html {
     width: 100%;
     height: 100vh;
     background-color: #CDB3D4;
-    
+
     z-index: 999;
     display: flex;
     justify-content: center;
@@ -231,7 +304,8 @@ html {
 }
 
 /* Botón de cerrar formulario */
-.closeFormBtn { /*Por qué los botones siguen quedándose de color azul?*/
+.closeFormBtn {
+    /*Por qué los botones siguen quedándose de color azul?*/
     background-color: #E7B7C8;
     margin-left: 10px;
 }
@@ -239,6 +313,7 @@ html {
 .closeFormBtn:hover {
     background-color: #c0392b;
 }
+
 /*Botón de "enviar"*/
 
 .submitBtn {
@@ -256,7 +331,8 @@ html {
 }
 
 /*ESTILIZADO DEL ELEMENTO POP-UP*/
-.popup { /*Definir aqui el estilo del pop-up*/
+.popup {
+    /*Definir aqui el estilo del pop-up*/
     position: fixed;
     top: 20%;
     left: 50%;
@@ -372,7 +448,7 @@ display: block; /*enseña solo el activa*/
 #services h1 {
     margin: auto;
 
-    
+
 
 }
 
@@ -446,7 +522,7 @@ display: block; /*enseña solo el activa*/
     color: #024969;
     font-size: 25px;
     font-weight: normal;
-    margin-top:50px;
+    margin-top: 50px;
 }
 
 
@@ -622,7 +698,7 @@ display: block; /*enseña solo el activa*/
     display: flex;
     flex-direction: column;
     margin-top: 130px;
-    margin-bottom:90px;
+    margin-bottom: 90px;
 
 }
 
@@ -632,7 +708,7 @@ display: block; /*enseña solo el activa*/
 
     color: #056491;
     font-size: 50px;
-    font-weight:normal;
+    font-weight: normal;
 }
 
 .teamMembers {
@@ -681,7 +757,7 @@ display: block; /*enseña solo el activa*/
 footer {
     display: flex;
     margin-top: 120px;
-    
+
     background-color: white;
 }
 
@@ -710,9 +786,9 @@ footer {
 }
 
 .footerLogo img {
-    
+
     width: 50px;
-    
+
 }
 
 .contact {
@@ -721,17 +797,17 @@ footer {
 }
 
 .socialMedia {
-    margin-left:150px;
+    margin-left: 150px;
 }
 
 .socialMedia h3 {
-    margin-top:30px;
-    margin-bottom:0;
+    margin-top: 30px;
+    margin-bottom: 0;
 }
 
 .socialMedia img {
-    width:40px;
-    height:40px;
+    width: 40px;
+    height: 40px;
 }
 
 
