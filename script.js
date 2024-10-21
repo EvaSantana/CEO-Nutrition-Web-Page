@@ -34,9 +34,7 @@ const observer = new IntersectionObserver(function(entries) {
     entries.forEach(function(entry) {
         if(entry.isIntersecting) {
             entry.target.classList.add("slideLeft");
-        } else {
-            entry.target.classList.remove("slideLeft"); 
-        }
+        } 
     });
 });
 
@@ -46,23 +44,52 @@ services.forEach( function(service) {
 
 const services2 = document.querySelectorAll(".service24");
 
-const observer2 = new IntersectionObserver(function (entries) {
+const observer2 = new IntersectionObserver(function(entries) {
     entries.forEach(function (entry) {
         if (entry.isIntersecting) {
             entry.target.classList.add("slideRight");
-        } else {
-            entry.target.classList.remove("slideRight");
-        }
+        } 
     });
 });
 
 services2.forEach(function (service) {
+    d
     observer2.observe(service);
 });
 
-//REVIEWS CARRUSEL//
+const reviewsCarrusel = document.querySelector(".reviewsCarrusel");
+const reviewers = document.querySelectorAll(".reviewsCarrusel .reviewer");
+let currentReview = 0;
+let intervalId = null;
+const totalReviews = reviewers.length;
 
-const reviewers = document.querySelectorAll(".reviewsCarrusel reviewers");
-let slideIndex = 0;
+const visibleReviews = 3; // Número de revisores visibles
+const step = 2000 / visibleReviews; // Porcentaje de desplazamiento por paso
+
+function showReviewer(index) {
+    reviewers.forEach((reviewer, i) => {
+        reviewer.classList.remove("active"); // Remueve la clase activa de todos
+        if (i === index) {
+            reviewer.classList.add("active")}
+    }
+    );
+    
+}
+
+function autoPlay() {
+    intervalId = setInterval(nextSlide, 2000);
+}
+
+function nextSlide() {
+    currentReview = (currentReview + 1) % totalReviews;
+    showReviewer(currentReview);
+}
+
+// Inicia el autoplay
+autoPlay();
+showReviewer(currentReview); // Muestra los revisores iniciales
+
+
+
 
 
