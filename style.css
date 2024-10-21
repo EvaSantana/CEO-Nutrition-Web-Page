@@ -103,52 +103,66 @@ body {
     align-items: center;
     justify-content: space-around;
     align-self: center;
-    width: 800px;
-    height: 600px;
+    width: 100vw;
+    height: 500px;
     opacity: 80%;
     border: none;
-    margin: auto;
+    margin: 0;
     overflow: hidden;
-    padding: 0 20px 0 20px;
+    box-shadow: 0 4px 10px gray;
     transition: transform 0.5s ease-in-out;
-}
-  /*box-shadow: 0 4px 10px gray;
-    border-radius: 10px;*/
+    transition-delay: 2ms;
+    border-radius: 3%;
 
+    }
 
-
-.texto1 {
-    display: flex;
-    justify-content: center;
-    font-size: 1rem;
+.carousel-container .texto1 {
+  position: absolute;
+  display: inherit;
+    font-size: 35px;
     padding-right: 10px;
     padding-left: 20px;
-    margin-top: 90px;
-}
+    top: 20%;
+    left: 50%;
+    transform: translate(-80%, -20%);
+    color: #036694;
+    text-align: left;
+    z-index: 1;
+    font-family: "Montserrat", sans-serif;
+    font-style: italic;
+    text-justify: inter-ideograph;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); 
+    }
 
 
 .carouselImage {
-    width: 300px;
-    height: 250px;
+    width: 880px;
+    height: 650px;
     display: none; /*oculta imagenes al principio*/
+    border-radius: 10%;
+    opacity: 0;
+    transition: opacity 2ms ease-in-out; /* Durata e tipo di transizione */
+    transition-delay: 2s;
 }
 
 .active {
 scale: 1.5;
 display: block; /*enseña solo el activa*/
+opacity: 5; /* enseña elemento attivo */
+transition-delay: 2s;
 }
 
 .prevBtn, .nextBtn {
+    display: none;
     top: 50%;
     background-color: rgba(255, 255, 255, 0.5);
     cursor: pointer;
-    border: 2px solid black;
-    width: 20px;
-    padding: 10px;
+    width: 15px;
+    padding: 6px;
     text-align: center;
     z-index: 1;
     transform: translateY(-50%);
-
+    border-radius: 10px;
     }
 
 .prevBtn {
@@ -174,14 +188,11 @@ display: block; /*enseña solo el activa*/
 .services h1 {
     margin: auto;
     padding-bottom: 90px;
-
 }
 
 .service1 {
     display: flex;
     height: 400px;
-
-
 }
 
 .service1Text {

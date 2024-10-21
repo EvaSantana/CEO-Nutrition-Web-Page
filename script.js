@@ -37,7 +37,7 @@ currentIndex = (currentIndex - 1 + images.length) % images.length;
 
 function resetAutoScroll() {
 clearInterval(autoScrollInterval);
-autoScrollInterval=setInterval (nextImage, 3000);
+autoScrollInterval=setInterval (nextImage, 5000);
 }
 
 
@@ -53,6 +53,7 @@ document.querySelector('.prevBtn').addEventListener('click', () => {
 });
 
 showImage(currentIndex);
-autoScrollInterval= setInterval(nextImage,3000);
+autoScrollInterval= setInterval(nextImage,5000);
 
 });
+
