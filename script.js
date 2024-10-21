@@ -228,7 +228,7 @@ const services2 = document.querySelectorAll(".service24");
 const observer2 = new IntersectionObserver(function (entries) {
     entries.forEach(function (entry) {
         if (entry.isIntersecting) {
-            entry.target.classList.add("slideRight");
+            entry.target.classList.add("slideLeft");
         }
     });
 });
