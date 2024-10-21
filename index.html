@@ -17,17 +17,18 @@
     <img class="background" src="./Images/webBackground.jpeg">
     <div class="container">
         <section class="mainBody">
-            <div class="texto1">Una vida saludable comienza con la elección correcta</div>
             <div class="carousel-container">
-                <button class="prevBtn"></button>
-                <img class="carouselImage" src="./Images/CarruselCabecera-1.jpg">
+                <div class="texto1">¡Una vida saludable comienza con la elección correcta!</div>
+
+                <img class="carouselImage" src="./Images/CarruselCabecera-5.jpg">
                 <img class="carouselImage" src="./Images/CarruselCabecera-2.jpg">
                 <img class="carouselImage" src="./Images/CarruselCabecera-3.jpg">
-                <img class="carouselImage" src="./Images/CarruselCabecera-4.jpg">
-                <img class="carouselImage" src="./Images/CarruselCabecera-5.jpg">
-                <button class="nextBtn">></button>
+                <img class="carouselImage" src="./Images/CarruselCabecera-1.jpg">
+                <img class="carouselImage" src="./Images/CarruselCabecera-7.jpg">
+                <img class="carouselImage" src="./Images/CarruselCabecera-8.jpg">
+                <img class="carouselImage" src="./Images/CarruselCabecera-9.jpg">
+
             </div>
-            <!-- Círculos pie de foto - cómo crear-->
 
             <div id="services">
                 <h1>Nuestros Servicios</h1>
@@ -246,57 +247,58 @@
                     </div>
                 </div>
             </div>
-            <div class="brandNameFooter">
-                <div class="footerLogo">
-                    <h1>NutriWealth</h1>
-                    <img src="./Images/LOGO.png">
+            <footer>
+                <div class="brandNameFooter">
+                    <div class="footerLogo">
+                        <h1>NutriWealth</h1>
+                        <img src="./Images/LOGO.png">
+                    </div>
+                    <p>Copyright <a href="someweb">Terms and conditions</a> and <a href="someweb">Privacy policy</a></p>
                 </div>
-                <p>Copyright <a href="someweb">Terms and conditions</a> and <a href="someweb">Privacy policy</a></p>
+                <div class="contact">
+                    <p>NutriWealth</p>
+                    <p>Calle Luis Morote 6.</p>
+                    <p>35005</p>
+                    <p>Las Palmas de Gran Canaria.</p>
+                </div>
+                <div class="socialMedia">
+                    <h3>Follow us</h3>
+                    <a href="https://www.facebook.com/?locale=es_ES" target="_blank"><img
+                            src="./Images/facebook.png"></a>
+                    <a href="https://www.instagram.com/?hl=es" target="_blank"><img src="./Images/instagram.png"></a>
+                    <a href="https://x.com/?lang=es" target="_blank"><img src="./Images/twitter.png"></a>
+                </div>
+            </footer>
+        </section>
+
+        <header class="navbar" id="navbar">
+            <div class="brandName">
+                <h1>NutriWealth</h1>
+                <img src="./Images/LOGO.png">
             </div>
-            <div class="contact">
-                <p>NutriWealth</p>
-                <p>Calle Luis Morote 6.</p>
-                <p>35005</p>
-                <p>Las Palmas de Gran Canaria.</p>
+
+            <button class="menuButton" id="menuButton" type="button">
+                <img src="./Images/MENU.png">
+            </button>
+
+            <div class="menuContent" id="menuContent">
+                <ul>
+                    <li><a href="#services">Nuestros servicios</a></li>
+                    <li><a href="#reviews">Opiniones</a></li>
+                    <li><a href="#team">Nuestro equipo</a></li>
+                </ul>
             </div>
-            <div class="socialMedia">
-                <h3>Follow us</h3>
-                <a href="https://www.facebook.com/?locale=es_ES" target="_blank"><img src="./Images/facebook.png"></a>
-                <a href="https://www.instagram.com/?hl=es" target="_blank"><img src="./Images/instagram.png"></a>
-                <a href="https://x.com/?lang=es" target="_blank"><img src="./Images/twitter.png"></a>
-            </div>
-    </div>
-    </footer>
-    </section>
 
-    <header class="navbar" id="navbar">
-        <div class="brandName">
-            <h1>NutriWealth</h1>
-            <img src="./Images/LOGO.png">
-        </div>
+            <button class="contactUsBtn" type="button"><img src="Images/CONTACT-US.png"></button>
+        </header>
 
-        <button class="menuButton" id="menuButton" type="button">
-            <img src="./Images/MENU.png">
-        </button>
-
-        <div class="menuContent" id="menuContent">
-            <ul>
-                <li><a href="#services">Nuestros servicios</a></li>
-                <li><a href="#reviews">Opiniones</a></li>
-                <li><a href="#team">Nuestro equipo</a></li>
-            </ul>
-        </div>
-
-        <button class="contactUsBtn" type="button"><img src="Images/CONTACT-US.png"></button>
-    </header>
-
-    <div class="contactFormOverlay"></div>
-    <!--Contenedor vacío al que le inyectaremos el formulario manipulando el DOM-->
+        <div class="contactFormOverlay"></div>
+        <!--Contenedor vacío al que le inyectaremos el formulario manipulando el DOM-->
 
     </div>
 
 
-    <script src="./script.js" defer></script>
+
 </body>
 
 </html>

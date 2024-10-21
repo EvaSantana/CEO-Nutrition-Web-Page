@@ -33,7 +33,7 @@ menuLinks.forEach(function (link) {
 const contactUsBtn = document.querySelector('.contactUsBtn');
 const contactFormOverlay = document.querySelector('.contactFormOverlay');
 
-function createContactForm() { 
+function createContactForm() {
     contactFormOverlay.innerHTML = '';
 
     const form = document.createElement('form');
@@ -106,7 +106,7 @@ function createContactForm() {
 
     // Añadir evento para el envío del formulario
     form.addEventListener('submit', function (event) {
-        event.preventDefault(); 
+        event.preventDefault();
 
         // Mostrar el mensaje pop-up
         showPopup('Formulario enviado con éxito. ¡Gracias por contactarnos!');
@@ -117,7 +117,7 @@ function createContactForm() {
 
     function showPopup(message) {
         const popup = document.createElement('div');
-        popup.classList.add('popup'); 
+        popup.classList.add('popup');
         popup.textContent = message;
 
         // Añadir el pop-up al contenedor del formulario
@@ -144,7 +144,7 @@ function createContactForm() {
         contactFormOverlay.classList.remove('active');
     });
 
-    
+
 }
 
 // Al hacer clic en el botón "Contact Us", crear y mostrar el formulario
@@ -152,12 +152,17 @@ contactUsBtn.addEventListener('click', function () {
     createContactForm();
     contactFormOverlay.classList.add('active');
 });
+
+
+
+// CARRUSEL DE CABECERA
+
 document.addEventListener('DOMContentLoaded', () => {
 
-const images = document.querySelectorAll('.carouselImage');
-const totalImages = images.length;
-    
-    const imageWidth = 300; 
+    const images = document.querySelectorAll('.carouselImage');
+    const totalImages = images.length;
+
+    const imageWidth = 300;
     const wrapper = document.querySelector('.carousel-wrapper');
 
     let currentIndex = 0;
@@ -170,43 +175,31 @@ const totalImages = images.length;
 
 
 
-function showImage(index) {
-    images.forEach((img, i) => {
-        if (i === index) {
-            img.classList.add('active');  
-        } else {
-            img.classList.remove('active');
-        }
-    });
-}
+    function showImage(index) {
+        images.forEach((img, i) => {
+            if (i === index) {
+                img.classList.add('active');
+            } else {
+                img.classList.remove('active');
+            }
+        });
+    }
 
-function nextImage() {
-    currentIndex= (currentIndex + 1) % images.length;
+    function nextImage() {
+        currentIndex = (currentIndex + 1) % images.length;
+        showImage(currentIndex);
+    }
+    function prevImage() {
+        currentIndex = (currentIndex - 1 + images.length) % images.length;
+        showImage(currentIndex);
+    }
+
+    function resetAutoScroll() {
+        clearInterval(autoScrollInterval);
+        autoScrollInterval = setInterval(nextImage, 5000);
+    }
+
     showImage(currentIndex);
-}
-function prevImage() {
-currentIndex = (currentIndex - 1 + images.length) % images.length;
-    showImage(currentIndex);
-}
-
-function resetAutoScroll() {
-clearInterval(autoScrollInterval);
-autoScrollInterval=setInterval (nextImage, 3000);
-}
-
-
-document.querySelector('.nextBtn').addEventListener('click', () => {
-    nextImage();
-    resetAutoScroll();
-});
-
-
-document.querySelector('.prevBtn').addEventListener('click', () => {
-    prevImage();
-    resetAutoScroll();
-});
-
-showImage(currentIndex);
-autoScrollInterval= setInterval(nextImage,3000);
+    autoScrollInterval = setInterval(nextImage, 5000);
 
 });
