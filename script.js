@@ -236,3 +236,37 @@ const observer2 = new IntersectionObserver(function (entries) {
 services2.forEach(function (service) {
     observer2.observe(service);
 });
+
+
+// REVIEWS ANIMATION
+
+document.addEventListener('DOMContentLoaded', () => {
+    const reviewers = document.querySelectorAll('.reviewer');
+    let currentIndex = 0;
+
+    function updateCarousel() {
+        reviewers.forEach((reviewer, index) => {
+            reviewer.classList.remove('active');
+            reviewer.style.opacity = '0.5';
+            reviewer.style.transform = 'scale(0.6)';
+
+            // Centrar la imagen activa
+            if (index === currentIndex) {
+                reviewer.classList.add('active');
+                reviewer.style.opacity = '1';
+                reviewer.style.transform = 'scale(0.9)'; // 
+            }
+        });
+    }
+
+    function nextReview() {
+        currentIndex = (currentIndex + 1) % reviewers.length;
+        updateCarousel();
+    }
+
+    // Iniciar el carrusel (rotación de imágenes cada 3 segundos)
+    setInterval(nextReview, 4000);
+
+    // Actualizar el carrusel inicialmente
+    updateCarousel();
+});
